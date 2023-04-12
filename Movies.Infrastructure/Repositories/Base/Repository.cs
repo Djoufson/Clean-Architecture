@@ -19,11 +19,13 @@ public class Repository<T> : IRepository<T> where T : Entity
         return entity;
     }
 
-    public async Task<bool> DeleteAsync(T entity)
+    public async Task<T> DeleteAsync(int id)
     {
+        var entity = (await _context.FindAsync<T>(id))!;
         _context.Remove(entity);
-        var records = await _context.SaveChangesAsync();
-        return records > 0;
+
+        await _context.SaveChangesAsync();
+        return entity;
     }
 
     public async Task<IReadOnlyList<T>> GetAllAsync()

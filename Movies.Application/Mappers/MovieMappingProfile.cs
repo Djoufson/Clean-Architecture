@@ -12,5 +12,6 @@ internal class MovieMappingProfile : Profile
         // Source => Target 
         CreateMap<Movie, MovieResponse>().ReverseMap();
         CreateMap<Movie, CreateMovieCommand>().ReverseMap();
+        CreateMap<Movie, UpdateMovieCommand>().ReverseMap();
     }
 }

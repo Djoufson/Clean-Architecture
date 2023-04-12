@@ -1,8 +1,8 @@
 ﻿using MediatR;
-using Movies.Core.Entities;
+using Movies.Application.Responses;
 
 namespace Movies.Application.Queries;
 
-public class GetAllMoviesQuery : IRequest<IEnumerable<Movie>>
+public class GetAllMoviesQuery : IRequest<IEnumerable<MovieResponse>>
 {
 }
