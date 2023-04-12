@@ -4,7 +4,7 @@ using Movies.Core.Repositories.Base;
 
 namespace Movies.Infrastructure.Repositories.Base;
 
-public abstract class Repository<T> : IRepository<T> where T : Entity
+public class Repository<T> : IRepository<T> where T : Entity
 {
     protected readonly DbContext _context;
 

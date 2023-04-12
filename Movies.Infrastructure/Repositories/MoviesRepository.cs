@@ -1,13 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Movies.Core.Entities;
 using Movies.Core.Repositories;
+using Movies.Infrastructure.Data;
 using Movies.Infrastructure.Repositories.Base;
 
 namespace Movies.Infrastructure.Repositories;
 
-internal class MoviesRepository : Repository<Movie>, IMoviesRepository
+public class MoviesRepository : Repository<Movie>, IMoviesRepository
 {
-    public MoviesRepository(DbContext context) : base(context)
+    public MoviesRepository(MoviesContext context) : base(context)
     {
     }
 

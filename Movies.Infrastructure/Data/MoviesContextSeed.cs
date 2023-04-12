@@ -7,6 +7,7 @@ public class MoviesContextSeed
 {
     public static async Task SeedDatas(MoviesContext context, ILogger logger)
     {
+        logger.LogInformation("==> Seeding datas");
         try
         {
             // We ensure that the database is created or already exists

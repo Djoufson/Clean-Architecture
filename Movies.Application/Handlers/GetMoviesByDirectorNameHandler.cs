@@ -14,6 +14,7 @@ public class GetMoviesByDirectorNameHandler : IRequestHandler<GetMoviesByDirecto
     {
         _repository = repository;
     }
+
     public async Task<IEnumerable<MovieResponse>> Handle(GetMoviesByDirectorNameQuery request, CancellationToken cancellationToken)
     {
         var responses = await _repository.GetMoviesByDirectorNameAsync(request.DirectorName);
