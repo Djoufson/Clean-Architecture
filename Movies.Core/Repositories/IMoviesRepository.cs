@@ -6,5 +6,5 @@ namespace Movies.Core.Repositories;
 public interface IMoviesRepository : IRepository<Movie>
 {
     Task<Movie> GetByNameAsync(string movieName);
-    Task<IEnumerable<Movie>> GetMoviesByDirectorNameAsync(string directorName);
+    Task<Movie[]> GetMoviesByDirectorNameAsync(string directorName);
 }
